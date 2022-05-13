@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Mehrwertsteuerrechner</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <form action="" onsubmit="return false">
+        <label for=""><input type="radio" name="net_brut" id="net_to_brut" checked>Mehrwertsteuer aufschlagen (Netto zu
+            Brutto)</label>
+        <label for=""><input type="radio" name="net_brut" id="brut_to_net">Mehrwertsteuer abziehen (Brutto zu
+            Netto)</label>
+        <label for=""><input type="radio" name="mwst" id="mwst_19" checked>19 %</label>
+        <label for=""><input type="radio" name="mwst" id="mwst_7">7 %</label>
+        <input type="text" name="" id="input_amount">
+        <button onclick="calcMwst()">BERECHNEN</button>
+        <p>Mehrwertsteuerbetrag</p>
+        <p id="output_mwst"></p>
+        <p>Bruttobetrag (Endpreis)</p>
+        <p id="output_total"></p>
+    </form>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
