@@ -10,20 +10,34 @@
 </head>
 
 <body>
-
+    <h1>Mehrwertsteuerrechner</h1>
     <form action="" onsubmit="return false">
-        <label for=""><input type="radio" name="net_brut" id="net_to_brut" checked>Mehrwertsteuer aufschlagen (Netto zu
-            Brutto)</label>
-        <label for=""><input type="radio" name="net_brut" id="brut_to_net">Mehrwertsteuer abziehen (Brutto zu
-            Netto)</label>
-        <label for=""><input type="radio" name="mwst" id="mwst_19" checked>19 %</label>
-        <label for=""><input type="radio" name="mwst" id="mwst_7">7 %</label>
-        <input type="text" name="" id="input_amount">
+        <fieldset>
+            <legend>Was soll berechnet werden?</legend>
+            <label for=""><input type="radio" name="net_brut" id="net_to_brut" checked>Mehrwertsteuer aufschlagen (Netto
+                zu
+                Brutto)</label>
+            <label for=""><input type="radio" name="net_brut" id="brut_to_net">Mehrwertsteuer abziehen (Brutto zu
+                Netto)</label>
+        </fieldset>
+        <fieldset>
+            <legend>Mehrwertsteuersatz</legend>
+            <label for=""><input type="radio" name="mwst" id="mwst_19" checked>19 %</label>
+            <label for=""><input type="radio" name="mwst" id="mwst_7">7 %</label>
+        </fieldset>
+        <fieldset>
+            <legend id="descr_input">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span></legend><input
+                type="text" name="" id="input_amount">
+        </fieldset>
         <button onclick="calcMwst()">BERECHNEN</button>
-        <p>Mehrwertsteuerbetrag</p>
-        <p id="output_mwst"></p>
-        <p>Bruttobetrag (Endpreis)</p>
-        <p id="output_total"></p>
+        <fieldset>
+            <legend>Mehrwertsteuerbetrag</legend>
+            <p><span id="output_mwst"></span> €</p>
+        </fieldset>
+        <fieldset>
+            <legend id="descr_output_total">Bruttobetrag (Endpreis)</legend>
+            <p><span id="output_total"></span> €</p>
+        </fieldset>
     </form>
 
     <script src="assets/js/main.js"></script>
